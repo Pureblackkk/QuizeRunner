@@ -7,6 +7,7 @@ class CodeInput:
         print(self.rawCode)
         # spilt the code
         rawCodeList = self.rawCode.split('\n')
+        print(rawCodeList)
         # delete the unnecessary elements
         rawCodeList = list(filter(lambda x: x != '', rawCodeList))
         # calculate the indent
@@ -20,8 +21,12 @@ class CodeInput:
             # Delete the symbol of the beginning
             rawCodeList[i] = self.__deleSymbol(rawCodeList[i])
             # set the indent
-            rawCodeList[i] = self.__indent(rawCodeList[i])
-        resCode= '\n'.join(rawCodeList)
+            rawCodeList[i] = self.__indent(rawCodeList[i], indent)
+            # replace the print
+            rawCodeList[i] = self.__replacePrint(rawCodeList[i])
+        rawCodeList.insert(0, 'global specialRes')
+        rawCodeList.insert(1, 'specialRes = []')
+        resCode = '\n'.join(rawCodeList)
         print('---Process Code:')
         print(resCode)
         return resCode
@@ -29,5 +34,8 @@ class CodeInput:
     def __deleSymbol(self, code):
         return code.replace('>', '')
 
-    def __indent(self, code):
-        return code[2:]
+    def __indent(self, code, indent):
+        return code[indent:]
+
+    def __replacePrint(self, code):
+        return code.replace('print','specialRes.append')

@@ -1,0 +1,39 @@
+{
+  // 清单文件的版本
+  "manifest_version": 2,
+  // 插件名称
+  "name": "QuizRunner",
+  // 插件版本
+  "version": "1.0.0",
+  // 插件描述
+  "description": "Run Quiz Python Program",
+  // 图标
+  "icons":
+  {
+    "16": "img/icon.jpg",
+    "48": "img/icon.jpg",
+    "128": "img/icon.jpg"
+  },
+  // 后台页
+  "background":
+  {
+    "page": "background.html"
+  },
+  // 浏览器右上角图标设置
+  "browser_action":
+  {
+    "default_icon": "img/icon.jpg",
+    // 图标悬停时的标题，可选
+    "default_title": "QuizRunner",
+    "default_popup": "popup.html"
+  },
+  // 权限
+  "permissions": [
+    "contextMenus", // 右键菜单
+    "notifications", // 通知
+    "storage", // 插件本地存储
+    "http://127.0.0.1/*"
+  ],
+  // 默认语言
+  "default_locale": "zh_CN"
+}

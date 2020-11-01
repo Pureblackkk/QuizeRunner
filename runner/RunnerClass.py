@@ -4,6 +4,8 @@ class Runner:
 
     def run(self):
         compCode = compile(self.proCode, '', 'exec')
-        exec(compCode)
+        res = exec(compCode)
+        # return the output
+        return specialRes
 
 
