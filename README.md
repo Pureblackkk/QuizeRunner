@@ -5,27 +5,27 @@
 
   1. 解压extension
 
-     ![image-20201106231800017](/Users/pureblack/Library/Application Support/typora-user-images/image-20201106231800017.png)
+     ![image-20201106231800017](README.assets/image-20201106231800017-4676987.png)
 
   2. 进入chrome扩展程序，打开开发者模式（右上角）
 
-     ![image-20201106231841766](/Users/pureblack/Library/Application Support/typora-user-images/image-20201106231841766.png)
+     ![image-20201106231841766](README.assets/image-20201106231841766.png)
 
   3. 点击加载已解压的扩展程序，选中extension导入
 
-     ![image-20201106231908014](/Users/pureblack/Library/Application Support/typora-user-images/image-20201106231908014.png)
+     ![image-20201106231906669](README.assets/image-20201106231906669-4676998.png)
 
   4. 出现如下图标后安装成功
 
-     <img src="/Users/pureblack/Library/Application Support/typora-user-images/image-20201106232003465.png" alt="image-20201106232003465" style="zoom:50%;" />
+     ![image-20201106232003465](README.assets/image-20201106232003465-4677018-4677020.png)
 
   5. 选中想要运行的python程序右键单击运行
 
-     <img src="/Users/pureblack/Library/Application Support/typora-user-images/image-20201106232313322.png" alt="image-20201106232313322" style="zoom:50%;" />
+     ![image-20201106232313322](README.assets/image-20201106232313322-4677036.png)
 
   6. 弹出print结果
   
-     <img src="/Users/pureblack/Library/Application Support/typora-user-images/image-20201106232342808.png" alt="image-20201106232342808" style="zoom:50%;" />
+     ![image-20201106232342808](README.assets/image-20201106232342808.png)
 
 + 说明
   + 目前只针对print结果进行输出
