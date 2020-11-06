@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80bbd2ce-851a-4c7a-b04e-2b218157133f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/content-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runner/RunnerClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/RunnerClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runner/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runner/tempOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/tempOutput.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +65,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,6 +94,9 @@
       <workItem from="1604494354117" duration="1546000" />
       <workItem from="1604496222681" duration="1750000" />
       <workItem from="1604498052950" duration="1302000" />
+      <workItem from="1604656647171" duration="736000" />
+      <workItem from="1604658557776" duration="1438000" />
+      <workItem from="1604660365845" duration="486000" />
     </task>
     <servers />
   </component>

@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c2e859-754f-431f-8365-80bbd4281421" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/extension/js/content-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extension/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extension/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extension/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/extension/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extension/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/extension/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/Execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Execute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/InputClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/InputClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner/RunnerClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/RunnerClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/tempOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runner/tempOutput.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

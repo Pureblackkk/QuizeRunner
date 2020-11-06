@@ -6,7 +6,7 @@ chrome.contextMenus.create({
     contexts: ['all'], // only show when there are contents
     onclick: function(params)
     {
-        var url = "http://127.0.0.1:8000/quizrunner";
+        var url = "http://47.110.33.143:8000/quizrunner";
         // run python scripts on server
         $.ajax({
             type: "POST",
