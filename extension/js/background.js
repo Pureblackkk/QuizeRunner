@@ -1,17 +1,18 @@
+var contentText = null
+
 // connect the server to run the code
 chrome.contextMenus.create({
     title: 'QuizRun：%s', // %s select the content
     contexts: ['all'], // only show when there are contents
     onclick: function(params)
     {
-        alert(window.getSelection().toString());
         var url = "http://127.0.0.1:8000/quizrunner";
         // run python scripts on server
         $.ajax({
             type: "POST",
             url: url,
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({"code":params.selectionText}),
+            data: JSON.stringify(contentText),
             datatype: "json",
             success: function(response){
                 var output = response;
@@ -22,4 +23,11 @@ chrome.contextMenus.create({
             }
         })
     }
+});
+
+// listen to the message from content-scripts
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
+{
+    contentText = request
+    sendResponse('我是后台，我已收到你的消息');
 });

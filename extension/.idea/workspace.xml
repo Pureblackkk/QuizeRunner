@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80bbd2ce-851a-4c7a-b04e-2b218157133f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/background.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/Execute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../runner/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/content-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../execute/Execute.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../execute/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../runner/InputClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/InputClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../runner/RunnerClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../runner/RunnerClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +81,11 @@
       <workItem from="1604232502679" duration="1279000" />
       <workItem from="1604235370828" duration="1057000" />
       <workItem from="1604237221398" duration="437000" />
+      <workItem from="1604490525581" duration="1494000" />
+      <workItem from="1604492336266" duration="861000" />
+      <workItem from="1604494354117" duration="1546000" />
+      <workItem from="1604496222681" duration="1750000" />
+      <workItem from="1604498052950" duration="1302000" />
     </task>
     <servers />
   </component>

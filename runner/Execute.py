@@ -9,6 +9,9 @@ class Execute:
         inputCode = Input(self.code)
         processCode = inputCode.process()
         runner = Run(processCode)
-        outPut = runner.run()
+        runner.run()
+        # get the print content
+        f = open("tempOutput.txt", "r")
+        outPut = f.read()
+        f.close()
         return outPut
-

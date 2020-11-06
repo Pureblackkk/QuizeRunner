@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c2e859-754f-431f-8365-80bbd4281421" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/extension/background.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extension/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runner/Execute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runner/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extension/js/content-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/execute/Execute.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/execute/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/extension/js/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extension/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/extension/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extension/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/extension/js/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extension/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/extension/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/Execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Execute.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner/InputClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/InputClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner/RunnerClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/RunnerClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,8 +128,8 @@
       <list>
         <item itemvalue="Python.Execute (1)" />
         <item itemvalue="Python.RunnerClass" />
-        <item itemvalue="Python.Execute" />
         <item itemvalue="Python.InputClass" />
+        <item itemvalue="Python.Execute" />
       </list>
     </recent_temporary>
   </component>
@@ -152,38 +151,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1603730276284" />
-    <state width="1440" height="294" key="GridCell.Tab.0.bottom" timestamp="1604235109175">
+    <state width="1440" height="279" key="GridCell.Tab.0.bottom" timestamp="1604649850500">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604235109175" />
-    <state width="1440" height="294" key="GridCell.Tab.0.center" timestamp="1604235109174">
+    <state width="1440" height="279" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604649850500" />
+    <state width="1440" height="279" key="GridCell.Tab.0.center" timestamp="1604649850499">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604235109174" />
-    <state width="1440" height="294" key="GridCell.Tab.0.left" timestamp="1604235109174">
+    <state width="1440" height="279" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604649850499" />
+    <state width="1440" height="279" key="GridCell.Tab.0.left" timestamp="1604649850499">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604235109174" />
-    <state width="1440" height="294" key="GridCell.Tab.0.right" timestamp="1604235109175">
+    <state width="1440" height="279" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604649850499" />
+    <state width="1440" height="279" key="GridCell.Tab.0.right" timestamp="1604649850500">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604235109175" />
-    <state width="1440" height="294" key="GridCell.Tab.1.bottom" timestamp="1604235109176">
+    <state width="1440" height="279" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604649850500" />
+    <state width="1440" height="294" key="GridCell.Tab.1.bottom" timestamp="1604648720882">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604235109176" />
-    <state width="1440" height="294" key="GridCell.Tab.1.center" timestamp="1604235109176">
+    <state width="1440" height="294" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604648720882" />
+    <state width="1440" height="294" key="GridCell.Tab.1.center" timestamp="1604648720882">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1604235109176" />
-    <state width="1440" height="294" key="GridCell.Tab.1.left" timestamp="1604235109175">
+    <state width="1440" height="294" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1604648720882" />
+    <state width="1440" height="294" key="GridCell.Tab.1.left" timestamp="1604648720881">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1604235109175" />
-    <state width="1440" height="294" key="GridCell.Tab.1.right" timestamp="1604235109176">
+    <state width="1440" height="294" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1604648720881" />
+    <state width="1440" height="294" key="GridCell.Tab.1.right" timestamp="1604648720882">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1440" height="294" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1604235109176" />
+    <state width="1440" height="294" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1604648720882" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1603763819736">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

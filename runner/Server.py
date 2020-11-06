@@ -10,8 +10,4 @@ def serverQuiz():
     rawData = request.get_data()
     rawCode = json.loads(rawData)['code']
     outPut = Execute(rawCode).exctuteCode()
-    # return the outPut to Client
-    for i in range(len(outPut)):
-        outPut[i] = 'Output'+str(1)+': '+outPut[i]
-    retOutput = ';'.join(outPut)
-    return retOutput
+    return outPut
