@@ -1,5 +1,5 @@
-# QuizeRunner
-#### 针对quiz的Chrome小插件
+# Web_Python_Runner
+#### 利用Chrome插件运行网页上显示的简单Python Code
 
 + 使用步骤：
 
