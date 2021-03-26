@@ -1,0 +1,30 @@
+.content{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 3%;
+}
+
+/* .terminal-input{
+    position: relative;
+    outline: none;
+    border:none;
+    resize:none;
+} */
+
+.cursor{
+    background-color: #b8b8b8;
+}
+
+.bink{
+}
