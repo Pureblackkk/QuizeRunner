@@ -1,5 +1,5 @@
 // TODO: Fix the problem to import it to handle.js
-let maxWidthSpan = 10; // Max number of span each line 
+let maxWidthSpan = 20; // Max number of span each line 
 
 // Name for dom class name
 const DOMNAME = {

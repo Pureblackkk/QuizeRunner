@@ -6,9 +6,10 @@ function loadPyodide() {
     .then(() => {
         pyodide.runPython(`
             import sys
-            import io        
+            import io    
+            sys.stdout = io.StringIO()    
         `);
-        // sys.stdout = io.StringIO()
+        
         console.log('Pyodide initalized!')
     })
 }
@@ -20,15 +21,17 @@ function runCode(code) {
 
     // Run code
     let ans = null;
-    let isError = false;
     try {
-        ans = pyodide.runPython(
-            `y`
-        );
-        console.log(ans);
+        ans = pyodide.runPython(code);
+        if(ans === undefined){
+            ans = pyodide.runPython("sys.stdout.getvalue()"); // Read the output from the sdtout stream
+            pyodide.runPython("sys.stdout.flush()"); // Flush the stdout
+        }
+        return ['output', ans.toString()];     
     }
     catch(error) {
-        console.log(error.message); // Only print out the error message
+        return ['error', error.message]; // Only return out the error message but not the trace back
+        // console.log(error.message); 
     }
 
 }

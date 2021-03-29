@@ -457,5 +457,35 @@ function renderEnter(textarea, cursorPos, cursorRow, maxWidthSpan) {
 
 }
 
-export {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter};
+// Render the code output
+function renderStdout(stdout, outCodeElement, maxWidthSpan) {
+    let stdOutLen = stdout.length;
+    let s = 0;
+    let currDiv = null;
+    while(s < stdOutLen){
+
+        if(stdout[s] === '\\n'){
+            // Add new line 
+            currDiv = document.createElement('div');
+            outCodeElement.append(currDiv);
+            s++;
+            continue;
+        }
+
+        if((s % maxWidthSpan === 0)) {
+            // Add new line
+            currDiv = document.createElement('div');
+            outCodeElement.append(currDiv);
+        }
+
+        // Render new elements
+        renderSpan(stdout[s], currDiv);
+        s++;
+        
+    }
+}
+
+
+
+export {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter, renderStdout};
 

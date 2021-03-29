@@ -1,4 +1,4 @@
-import {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter} from './render.js';
+import {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter, renderStdout} from './render.js';
 import {cursorPos as CursorPos, codeStatus as CodeStatus, maxWidthSpan, DOMNAME, lastTextLength as LastTextLength, codeStatus} from './common.js';
 import {setCursorPosition as setCursorPos} from './textarea.js';
 import {isNewCode} from './grammer/grammerCheck.js';
@@ -82,7 +82,7 @@ function downArrowKey() {
 
 // Todo: Fill the enter key 
 function enterKey() {
-    const textarea = document.getElementById(DOMNAME.textarea);
+    const textarea = document.getElementById(DOMNAME.textarea); 
     const text = textarea.value;
     if(isNewCode(text) >= 0) { // Start new line 
         const cursorPos = CursorPos.getCursor(); // Get the current cursor position in textareabox
@@ -94,8 +94,27 @@ function enterKey() {
         // Render enter space placeholder 
         renderEnter(textarea, cursorPos, cursorRow, maxWidthSpan);
 
-    }else { // TODO: Case2: submmit code and run 
-        runCode();
+    }else { // Submmit code and run 
+        let [type, stdout] = runCode(text);
+
+        // Render the output of python code
+        if(stdout.length > 0){
+            const terminalNode = document.getElementsByClassName(DOMNAME.terminal)[0];
+            let lastCodeElement =  document.getElementsByClassName(DOMNAME.code);
+            lastCodeElement = lastCodeElement ? lastCodeElement[lastCodeElement.length - 1] : null;
+            let outCodeElement = document.createElement('div');
+            outCodeElement.className = 'code-output' + '-' + type;
+
+            // Render the output to the code-output element
+            renderStdout(stdout, outCodeElement, maxWidthSpan);
+
+            // Add the new div element into terminal
+            terminalNode.insertBefore(outCodeElement, lastCodeElement.nextSibling);
+        }
+
+        // TODO: Restart new round
+
+
     }
     
     
