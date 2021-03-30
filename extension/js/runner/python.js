@@ -25,7 +25,7 @@ function runCode(code) {
         ans = pyodide.runPython(code);
         if(ans === undefined){
             ans = pyodide.runPython("sys.stdout.getvalue()"); // Read the output from the sdtout stream
-            pyodide.runPython("sys.stdout.flush()"); // Flush the stdout
+            pyodide.runPython("sys.stdout = io.StringIO()"); // Creat a new string io object to recieve the output
         }
         return ['output', ans.toString()];     
     }

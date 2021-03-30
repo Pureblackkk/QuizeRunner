@@ -2,6 +2,7 @@
     This file is used to generate the terminal 
 */
 import {DOMNAME, CursorStyle} from './common.js';
+import {historyCode as HistoryCode} from './runner/history.js'
 
 // Render Single Span 
 function renderSpan(text, father) {
@@ -18,6 +19,19 @@ function renderSpan(text, father) {
 function deleteSpan(relLoc, father) {
     let deleteNode = father.children[relLoc];
     deleteNode.parentNode.removeChild(deleteNode);
+}
+
+// Render new code-terminal
+function renderNewCode(father) { 
+    // Add new text
+    let newDiv = document.createElement('div');
+    newDiv.innerHTML = '>>>&nbsp; ';
+    father.append(newDiv);
+
+    // Delete the last cursor 
+    let lastCursor = document.getElementsByClassName('cursor')[0];
+    lastCursor.removeAttribute('style');
+    lastCursor.classList.remove('cursor');
 }
 
 
@@ -336,23 +350,47 @@ function renderRight(cursorPos, cursorRow, maxWidthSpan, currLen) {
 // Render up arrow key operation
 function renderUp(cursorPos, cursorRow, maxWidthSpan, currentLen) {
     if(cursorRow === 0){
-        // TODO: fill the function to trace the hisotry code
-        return [cursorPos, cursorRow];
+        // Present the history code
+        let newNode = HistoryCode.getItem().node.cloneNode(true);
+        let newText = HistoryCode.getItem().text;
+        HistoryCode.pointBack();
+        if(newNode) {
+            // Replace the current code node with history node
+            let terminalNode = document.getElementsByClassName(DOMNAME.terminal)[0];
+            let inputNode = document.getElementById(DOMNAME.textarea);
+            let currentCodeNode = document.getElementsByClassName(DOMNAME.code);
+            currentCodeNode = currentCodeNode[currentCodeNode.length - 1];
+            terminalNode.removeChild(currentCodeNode);
+            terminalNode.insertBefore(newNode, inputNode);
+
+            // Replace the textera 
+            inputNode.value = newText;
+        }
+
+        // Calculate the new cursorPos, cursorRow
+        cursorPos = newText.length;
+        cursorRow = Math.floor(cursorPos / maxWidthSpan);
+
+        // Render new cursor
+        let lineDivList = document.querySelectorAll('.' + DOMNAME.code + ' div');
+        creatCursor(lineDivList[cursorRow], cursorPos % maxWidthSpan);
+
+        return [cursorPos, cursorRow, newText.length];
+
+    }else{// Move the cursor up 
+
+        // Delete cursor 
+        deleteCursor(cursorPos, currentLen);
+
+        cursorRow--;
+        cursorPos = cursorPos - maxWidthSpan;
+
+        // Render new cursor
+        let lineDivList = document.querySelectorAll('.' + DOMNAME.code + ' div');
+        creatCursor(lineDivList[cursorRow], cursorPos % maxWidthSpan);
+
+        return [cursorPos, cursorRow, null];
     }
-    
-    // Delete cursor 
-    deleteCursor(cursorPos, currentLen);
-
-    cursorRow--;
-    cursorPos = cursorPos - maxWidthSpan;
-
-    // Render new cursor
-    let lineDivList = document.querySelectorAll('.' + DOMNAME.code + ' div');
-    creatCursor(lineDivList[cursorRow], cursorPos % maxWidthSpan);
-
-
-    return [cursorPos, cursorRow];
-
 }
 
 
@@ -363,7 +401,35 @@ function renderDown(cursorPos, cursorRow, maxWidthSpan, currentLen) {
     let lineDivLength = lineDivList.length - 1;
 
     if(cursorRow === lineDivLength){
-        return [cursorPos, cursorRow];
+        // Present the history code
+        if (HistoryCode.pointNext()) {
+            let newNode = HistoryCode.getItem().node.cloneNode(true);
+            let newText = HistoryCode.getItem().text;
+            if(newNode) {
+                // Replace the current code node with history node
+                let terminalNode = document.getElementsByClassName(DOMNAME.terminal)[0];
+                let inputNode = document.getElementById(DOMNAME.textarea);
+                let currentCodeNode = document.getElementsByClassName(DOMNAME.code);
+                currentCodeNode = currentCodeNode[currentCodeNode.length - 1];
+                terminalNode.removeChild(currentCodeNode);
+                terminalNode.insertBefore(newNode, inputNode);
+    
+                // Replace the textera 
+                inputNode.value = newText;
+            }
+
+            // Calculate the new cursorPos, cursorRow
+            cursorPos = newText.length;
+            cursorRow = Math.floor(cursorPos / maxWidthSpan);
+
+            // Render new cursor
+            creatCursor(lineDivList[cursorRow], cursorPos % maxWidthSpan);
+            
+            return [cursorPos, cursorRow, newText.length];
+
+        }else{
+            return [cursorPos, cursorRow, null];
+        }
     }
 
     // Delete cursor 
@@ -390,7 +456,7 @@ function renderDown(cursorPos, cursorRow, maxWidthSpan, currentLen) {
         creatCursor(currDiv, cursorPos % maxWidthSpan);
     }
 
-    return [cursorPos, cursorRow];
+    return [cursorPos, cursorRow, null];
 }
 
 
@@ -438,7 +504,7 @@ function creatCursor(father, location){
 }
 
 
-// TODO: Render enter key operation 
+// Render enter key operation 
 function renderEnter(textarea, cursorPos, cursorRow, maxWidthSpan) {
     console.log('Enter key down and new line');
     let lineDivList = document.querySelectorAll('.' + DOMNAME.code + ' div'); // Get div list 
@@ -457,14 +523,15 @@ function renderEnter(textarea, cursorPos, cursorRow, maxWidthSpan) {
 
 }
 
-// Render the code output
+// Render the code output   
 function renderStdout(stdout, outCodeElement, maxWidthSpan) {
     let stdOutLen = stdout.length;
     let s = 0;
     let currDiv = null;
     while(s < stdOutLen){
 
-        if(stdout[s] === '\\n'){
+        //TODO: fix the \n problem
+        if(stdout[s] === '\n'){
             // Add new line 
             currDiv = document.createElement('div');
             outCodeElement.append(currDiv);
@@ -486,6 +553,5 @@ function renderStdout(stdout, outCodeElement, maxWidthSpan) {
 }
 
 
-
-export {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter, renderStdout};
+export {renderTextarea, renderLeft, renderRight, renderUp, renderDown, renderEnter, renderStdout, renderNewCode};
 
